@@ -2,18 +2,18 @@
 {"dg-publish":true,"permalink":"/ingest/sin/open-web-ui-mastery-building-tools-functions-and-mcp-servers/","tags":["gardenEntry"]}
 ---
 
-# Open WebUI Mastery Building Tools, Functions, and MCP Servers
-```
+ Open WebUI Mastery Building Tools, Functions, and MCP Servers
+
 ## 📦 Part 1: Tools – Creating Callable Functions for LLMs
 
-[[sin/Initialization/Docs/Open WebUI Docs/Open WebUI tools\|Open WebUI tools]] [[Tools]] are structured Python plugins that LLMs can invoke during chats. These [[Tools]] are bound to specific [[sin/Initialization/Docs/Datasets/8. Datasets]] that support **function calling**, such as GPT-[[tools-export-1745623456262.json]] or Claude.
+[[sin/Initialization/Docs/Open WebUI Docs/Open WebUI tools\|Open WebUI tools]] [[SIN Docs MAIN/AGI/tools\|Tools]] are structured Python plugins that LLMs can invoke during chats. These [[SIN Docs MAIN/AGI/tools\|Tools]] are bound to specific [[sin/Initialization/Docs/Datasets/8. Datasets\|sin/Initialization/Docs/Datasets/8. Datasets]] that support **function calling**, such as GPT-[[tools-export-1745623456262.json\|tools-export-1745623456262.json]] or Claude.
 
 ### 📁 Tool Structure
 
 Every tool lives inside a single `.py` file, with:
 
 * A top-level docstring describing metadata
-* A `[[[[Tools]]]]` class
+* A `[[[[SIN Docs MAIN/AGI/tools\|Tools]]]]` class
 * Optional `Valves` and `UserValves` for settings
 
 #### ✅ Example: Basic String Reversal Tool
@@ -42,13 +42,13 @@ class Tools:
 * Add all metadata to the docstring to support import/export.
 * Always validate input parameters (e.g., API keys).
 * Use `Valves` for shared config.
-* Add descriptions for [[sin/Initialization/Docs/Datasets/8. Datasets]] understanding.
+* Add descriptions for [[sin/Initialization/Docs/Datasets/8. Datasets\|sin/Initialization/Docs/Datasets/8. Datasets]] understanding.
 
 ### ⚙️ Import & Enable in Open WebUI
 
-[[tools-export-1745623456262.json]]. Import from the [[sin/Initialization/Docs/Open WebUI Docs/Open WebUI tools|Open WebUI tools]]: **Workspace > [[Tools]] > Import Tool**
-[[02-05-2025]]. Assign to [[sin/Initialization/Docs/Datasets/8. Datasets]] in **Workspace > [[sin/Initialization/Docs/Datasets/8. Datasets]] > [[Tools]]**
-[[tools-export-1745623456262.json]]. Optionally use the `autotool_filter` for automatic function routing.
+[[tools-export-1745623456262.json\|tools-export-1745623456262.json]]. Import from the [[sin/Initialization/Docs/Open WebUI Docs/Open WebUI tools\|Open WebUI tools]]: **Workspace > [[SIN Docs MAIN/AGI/tools\|Tools]] > Import Tool**
+[[02-05-2025\|02-05-2025]]. Assign to [[sin/Initialization/Docs/Datasets/8. Datasets\|sin/Initialization/Docs/Datasets/8. Datasets]] in **Workspace > [[sin/Initialization/Docs/Datasets/8. Datasets\|sin/Initialization/Docs/Datasets/8. Datasets]] > [[SIN Docs MAIN/AGI/tools\|Tools]]**
+[[tools-export-1745623456262.json\|tools-export-1745623456262.json]]. Optionally use the `autotool_filter` for automatic function routing.
 
 ---
 
@@ -251,7 +251,7 @@ To use **function calling** natively inside chats:
 
 ## 🚨 Common Problems & Fixes
 
-Problem Cause Fix ❌ [[Tools]] don't show up Wrong OpenAPI spec or missing `/openapi.json` Check server `/docs` page manually ❌ CORS Error No CORS headers added Use `CORSMiddleware` or equivalent ❌ "Mixed Content" Error HTTPS [[sin/Initialization/Docs/Open WebUI Docs/Open WebUI tools|Open WebUI tools]] talking to HTTP server Serve tool server over HTTPS locally or tunnel via ngrok ❌ Function not triggered Model doesn't support native [[sin/Initialization/Docs/Open WebUI Docs/Functions/Functions]] Switch to GPT-4o, GPT-[[tools-export-1745623456262.json]] Turbo, or Claude [[tools-export-1745623456262.json]]
+Problem Cause Fix ❌ [[Tools]] don't show up Wrong OpenAPI spec or missing `/openapi.json` Check server `/docs` page manually ❌ CORS Error No CORS headers added Use `CORSMiddleware` or equivalent ❌ "Mixed Content" Error HTTPS [[sin/Initialization/Docs/Open WebUI Docs/Open WebUI tools\|Open WebUI tools]] talking to HTTP server Serve tool server over HTTPS locally or tunnel via ngrok ❌ Function not triggered Model doesn't support native [[sin/Initialization/Docs/Open WebUI Docs/Functions/Functions\|sin/Initialization/Docs/Open WebUI Docs/Functions/Functions]] Switch to GPT-4o, GPT-[[tools-export-1745623456262.json\|tools-export-1745623456262.json]] Turbo, or Claude [[tools-export-1745623456262.json\|tools-export-1745623456262.json]]
 
 # 🧠 Open WebUI Mastery Building Tools, Functions, and MCP Servers
 
@@ -412,4 +412,4 @@ Then:
 uvicorn server:app --host 0.0.0.0 --port 8000
 ```
 
-Boom: you now have a **custom tool server** ready for [[sin/Initialization/Docs/Open WebUI Docs/Open WebUI tools|Open WebUI tools]]. 🚀
+Boom: you now have a **custom tool server** ready for [[sin/Initialization/Docs/Open WebUI Docs/Open WebUI tools\|Open WebUI tools]]. 🚀
