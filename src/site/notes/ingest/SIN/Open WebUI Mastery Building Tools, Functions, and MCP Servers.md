@@ -2,12 +2,7 @@
 {"dg-publish":true,"permalink":"/ingest/sin/open-web-ui-mastery-building-tools-functions-and-mcp-servers/","tags":["gardenEntry"]}
 ---
 
-```
----
-dg-home: true
-dg-publish: true
----
-```
+# Open WebUI Mastery Building Tools, Functions, and MCP Servers
 ```
 ## 📦 Part 1: Tools – Creating Callable Functions for LLMs
 
